@@ -27,7 +27,7 @@ Connecting the App to SharePoint:
 
 
 # Absence Manager
-The Absence Manager is a fully responsive (tablet and mobile version) Power Platform application built with Power Apps, customized with Power Automate flow and connected to a SharePoint lists to manage absence requests.
+The Absence Manager is a fully responsive (tablet and mobile version) Power Platform application built with Power Apps, customized with Power Automate flow and connected to a SharePoint lists to manage absence requests. The original app was created during the Udemy course, however substantial approvment were added, including: Power Automate flows and responsive design.
 
 This README provides an overview of the app’s features and functionality.
 ## Features
@@ -60,55 +60,32 @@ With this app, users can:
 - Upon clicking "Submit" button the request is send to SharePoint list with "In progress" status and waiting for the approval.
 - Power Automate flow is sending approval e-mail to the manager and now he can can decide through e-mail. He wants to approve or reject the request..? Now it's time for the decision!
 - When manager decide whether he allows the person take some days off the requester is getting his answer right away with a short e-mail. He is informed whether his approval was approved or rejected :)
-  Of course, the screen is fully responsive, so it can be managed online, on tablet or mobile phone:
+- The status in the sharepoint list is automatically changes from "In progress" to "Approved" or "Rejected"
+
+Of course, the screen is fully responsive, so it can be managed online, on tablet or mobile phone:
 
 
 ![Screen Request Absence ](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Absence%20Horizontal%20Tablet.jpg)
 
 ![Screen Request Absence ](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Abcence%20Vertical%20Tablet.jpg)
-
 ![Screen Request Absence ](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Absence%20Screen%20Mobile.jpg)
-#### 📋 Screen II and III 
-- Various input methods:
-✅ Text fields
-✅ Radio buttons
-✅ Dropdowns
-✅ Combo boxes (for multiple selections)
-- Top section displays the current patient ID (from the global variable).
-![Screen II](https://github.com/BMirska/Medical-Survey/blob/main/Screen2.png)
-![Screen III](https://github.com/BMirska/Medical-Survey/blob/main/Screen3.png)
-#### ✅ Screen IV (Submit Survey)
-- The user provides the final answers and clicks "Send the Answers".
-What happens next?
-1️⃣ The responses are saved to the SharePoint list.
-2️⃣ All input fields are reset.
-3️⃣ A confirmation message appears.
-4️⃣ The user is redirected to the Home Screen.
-If an error occurs, the app displays a message prompting the user to contact an administrator.
-Progress indicator at the bottom shows survey completion status.
-![Screen IV](https://github.com/BMirska/Medical-Survey/blob/main/Screen4.png)
-#### ❌ User Can Cancel the Survey at Any Step
-- Clicking the "X" button redirects to a confirmation screen: "Returning to the main screen will result in data loss. Do you want to cancel the survey?"
-- If the user chooses to cancel:
-- The survey progress is reset.
-- The patient is not added to the SharePoint list.
-- The app navigates back to the Home Screen.
-![Screen IV](https://github.com/BMirska/Medical-Survey/blob/main/Screen%20Message.png)
-#### ✏️ Screen Edit and View Surveys
-- If a survey already exists for a patient, the user can edit the form here.
-- Left panel (Gallery) → Displays all existing surveys with a search function (by Patient Name or ID).
-- Right panel → Shows survey responses for the selected patient.
-- Top section → Users can Edit, Submit changes, or Navigate to the Home Screen.
-When a user submits an edit, the app updates the SharePoint list with:
-✅ The edited answers
-✅ The user’s credentials (who made the change)
-✅ The modification date
-![Screen IV](https://github.com/BMirska/Medical-Survey/blob/main/Screen%20Edit%20View.png)
-### 🚀 Summary
-The Medical Survey App streamlines patient survey management with:
-✅ Easy patient registration
-✅ Survey navigation with progress tracking
-✅ Duplicate entry prevention
-✅ Survey editing and history tracking
 
-This demo provides a basic implementation, while the full version integrates with multiple survey applications for a hospital-wide solution.
+#### 📋 Screen Pending Request
+- Here manager can see how many request is pending and decide which one he wants to manage..
+
+![Pending Request Horizontal](https://github.com/BMirska/AbsenceManager/blob/main/Pending%20Request%20Screen%20Horizontal%20Tablet.jpg)
+![Pending Request Vertical](https://github.com/BMirska/AbsenceManager/blob/main/Pending%20Request%20Screen%20Vertical%20Tablet.jpg)
+![Pending Request Mobile](https://github.com/BMirska/AbsenceManager/blob/main/Pending%20Request%20Screen%20Mobile.jpg)
+
+#### ✅ Screen Decide
+- When manager click on "Pending Request Screen" Decide Button, he is launched to "Decision Screen". Here he can directly decide about requests.
+  
+
+### 🚀 Summary
+The Absence Manager App streamlines absence management with:
+✅ Easy request submition
+✅ Pending request management 
+✅ Is fully responsive
+✅ Has Power Automate customization 
+
+
