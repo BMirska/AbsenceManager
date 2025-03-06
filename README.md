@@ -1,6 +1,8 @@
 # Before you start
 You can download a ZIP file along with two CSV files ("Request" and "Absence Type"). Before using the app, you need to create a SharePoint list.
 
+You can choose your e-mail in the EmailAdmin environmental variable, so the flow will automatically send you e-mails as new requests is sent.
+
 How to Set Up the SharePoint List:
 - Select your desired SharePoint site.
 - Click "Add new list" → "From existing CSV file".
@@ -25,7 +27,7 @@ Connecting the App to SharePoint:
 
 
 # Absence Manager
-The Absence Manager is a Power Platform application built with Power Apps, customized with Power Automate flow and connected to a SharePoint lists to manage absence requests.
+The Absence Manager is a fully responsive (tablet and mobile version) Power Platform application built with Power Apps, customized with Power Automate flow and connected to a SharePoint lists to manage absence requests.
 
 This README provides an overview of the app’s features and functionality.
 ## Features
@@ -39,18 +41,33 @@ With this app, users can:
 #### ⏳ Loading Screen:
 - Loads all essential app styles as global variables (OnVisible property).
 - A timer ensures that all global variables are properly loaded before navigating to the Home Screen.
-![Loading Screen](https://github.com/BMirska/Medical-Survey/blob/main/LoadingScreen.png)
+![Loading Screen](https://github.com/BMirska/AbsenceManager/blob/main/Zrzut%20ekranu%202025-03-06%20132310.png)
 #### 🏠  Screen 1 'Home Screen':
-- Central navigation panel → Allows users to select the survey type. In this demo, only the "Health Habits" survey is available.
-- Left navigation panel → Navigate to "Complete Another Survey" (in the full version: access different applications and visits). Directly access "View and Edit Surveys" for managing existing surveys.
-- Right panel → Displays real-time statistics: Number of registered patients (= Number of completed surveys).
-![Home Screen](https://github.com/BMirska/Medical-Survey/blob/main/HomeScreen.png)
-#### 👤 Screen I Basic
-- Users register a new patient by entering Patient Name and Patient ID (both required). If the Patient ID does not exist in SharePoint → The user can proceed. If the Patient ID already exists → The user cannot proceed and sees a message: "The survey for this patient has already been completed! Please go to the 'Review and Edit Surveys' tab."
-- Upon clicking "→" (Next button):
-- The Patient ID is stored as a global variable for use in the next screens.
-- A progress indicator at the bottom shows how many steps remain.
-![Screen I](https://github.com/BMirska/Medical-Survey/blob/main/Screen1.png)
+- Left navigation panel → Allows users to select screen for new Request ("Request Absence"). Manager can go directly to management of pending requests "Approve requests".
+- Main content → User can track the numbers of left number of days off, the number of sent requests and number of requests currently in approval. Below he can easily scroll through Pending requests. Manager see also second gallery "Request to Approve"
+- Tablet versions:
+  
+![Home Screen Tablet Horizontal](https://github.com/BMirska/AbsenceManager/blob/main/Home%20Screen%20Horizontal%20Tablet.jpg)
+![Home Screen Tablet Vertical](https://github.com/BMirska/AbsenceManager/blob/main/Pending%20Request%20Screen%20Vertical%20Tablet.jpg)
+
+- Mobile version:
+  
+![Home Screen Tablet Vertical](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Absence%20Screen%20Mobile.jpg)
+
+
+#### 👤 Screen Request Absence
+- Users request a new absence in Request Absence Screen. They can choose the absence type, dates (from - to) and deputy (if needed). They can provide additional comments to the approver. Approver is set automatically (persons manager). 
+- Upon clicking "Submit" button the request is send to SharePoint list with "In progress" status and waiting for the approval.
+- Power Automate flow is sending approval e-mail to the manager and now he can can decide through e-mail. He wants to approve or reject the request..? Now it's time for the decision!
+- When manager decide whether he allows the person take some days off the requester is getting his answer right away with a short e-mail. He is informed whether his approval was approved or rejected :)
+  Of course, the screen is fully responsive, so it can be managed online, on tablet or mobile phone:
+
+
+![Screen Request Absence ](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Absence%20Horizontal%20Tablet.jpg)
+
+![Screen Request Absence ](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Abcence%20Vertical%20Tablet.jpg)
+
+![Screen Request Absence ](https://github.com/BMirska/AbsenceManager/blob/main/Request%20Absence%20Screen%20Mobile.jpg)
 #### 📋 Screen II and III 
 - Various input methods:
 ✅ Text fields
