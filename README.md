@@ -14,29 +14,27 @@ How to Set Up the SharePoint List:
 
 ![AbsenceType2](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint1.jpg)
 
-  "Request" list should looks like this:
-![Request](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint2.jpg)
+  "Request" list should looks like this (most common issue is lack of ID (numeric) column. Sometimes it might be necessary to add it:
+![AbsenceType2](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint%20Hint2.jpg)
 
 
 Connecting the App to SharePoint:
 - The app uses Environmental Variables for SharePoint connections.
 - When launching the app, you will be prompted to select your own SharePoint list.
-- Enjoy using the Medical Survey app! 🚀
+- Enjoy using the Absence Manager app! 🚀
 
 
 # Absence Manager
-The Medical Survey is a Power Platform application built with Power Apps, connected to a SharePoint list to streamline patient survey management and data collection.
+The Absence Manager is a Power Platform application built with Power Apps, customized with Power Automate flow and connected to a SharePoint lists to manage absence requests.
 
 This README provides an overview of the app’s features and functionality.
 ## Features
-The Medical Survey App consists of multiple screens that provide a comprehensive survey management solution.
-
-This demo version represents a simplified application, whereas the original solution is part of a broader system connecting multiple survey apps within a medical hospital.
+The Absence Manager app consists of multiple screens that provide a comprehensive absence management solution.
 
 With this app, users can:
-✅ Add new surveys for patients
-✅ Manage already completed surveys
-✅ Prevent duplicate entries and redirect users to the editing section
+✅ Add new request for days off
+✅ View pending requests and track number of remain days off
+✅ Manager has a previlage to decide about the requested days off - it is possible to make it directly from the app or by e-mail automatically send when new request is submitted.
 
 #### ⏳ Loading Screen:
 - Loads all essential app styles as global variables (OnVisible property).
