@@ -8,14 +8,14 @@ How to Set Up the SharePoint List:
 - This will automatically create all the necessary columns for you. It happens sometimes that automatic csv creation fails and some issues might occur.
 - Now, you need to make sure to set up both lists with appropriate changes:
   "Absence Type" list should looks like this:
-![Loading Screen](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint1A.jpg)
+![AbsenceType1](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint1A.jpg)
 
 -But after import might look like this:
 
-![Loading Screen](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint1.jpg)
+![AbsenceType2](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint1.jpg)
 
   "Request" list should looks like this:
-![Loading Screen](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint2.jpg)
+![Request](https://github.com/BMirska/AbsenceManager/blob/main/SharePoint_Hint2.jpg)
 
 
 Connecting the App to SharePoint:
